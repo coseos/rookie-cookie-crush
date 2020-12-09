@@ -1,0 +1,27 @@
+{
+
+  "manifest_version": 2,
+  "name": "Rookie Cookie Crush",
+  "version": "1.0",
+
+  "description": "Rookie Cookie Crush tries to remove GDPR consent cookie boxes",
+
+  "icons": {
+    "48": "icons/rookie-cookie-crush-48.png",
+    "96": "icons/rookie-cookie-crush-96.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["rookie-cookie-crush.js"]
+    }
+  ],
+  
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rookie-cookie-crush@coseos.com",
+      "strict_min_version": "83.0"
+    }
+  }
+}
