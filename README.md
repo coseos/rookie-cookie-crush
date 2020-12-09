@@ -8,7 +8,7 @@ that appeared since a new GDPR law has been introduced in the European Union.
 It will not always work but it will get better over time and free you from
 accepting nonsense cookie consent boxes.
 
-** Some background on the Cookie Law in the European Union
+## Some background on the Cookie Law in the European Union
 
 The European Union claims to protect users from data abuse by introducing
 a law that requires visitors to explicitly declare consent with cookies
@@ -33,7 +33,7 @@ minimal technical required cookies is wrong in the first place.
 This Add-On remove cookie consent box wherever it can. Most pages will now
 work as they did before the European Union introduced the cookie law.
 
-** What is next
+## What is next
 
 The race is now on. With no doubt, some websites will try to circumvent the
 use of Rookie Cookie Crush. Others may realize that the whole concept of user
