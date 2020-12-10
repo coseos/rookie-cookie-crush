@@ -6,6 +6,7 @@ const cookieNodeIds = [
     { nodeId: "cookieBanner" },
     { nodeId: "cookieNotification" },
     { nodeId: "gdpr-popup" },
+    { nodeId: "popup-cookieConsent" },
     { nodeId: "lb", urlPattern: /^https?:\/\/(?:www\.)\u0067\u006f\u006f\u0067\u006c\u0065.\u0064\u0065/ }
 ];
 
