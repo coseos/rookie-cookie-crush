@@ -10,8 +10,24 @@ const cookieNodeIds = [
 ];
 
 const cookieNodeClasses = [
-    { clazz: "page-wrap--cookie-permission" }
+    { clazz: "page-wrap--cookie-permission" },
+    { clazz: "gdpr-cookieconsent-overlay" },
+    { clazz: "gdpr-cookieconsent-settings" }
 ];
+
+const customAttributes = [
+    { selector: "div[aria-label='cookieconsent']" },
+    { selector: "div[data-testid='gdpr-dock']" }
+]
+
+function ignoreByURLpattern( info ) {
+    if(null!==info.urlPattern) {
+        if(null===document.URL.match(info.urlPattern)) {
+            return true;
+        }
+    }
+    return false;
+}
 
 function removeById( elementId ) {
     if(null!==elementId.urlPattern) {
@@ -39,9 +55,22 @@ function removeByClassname( clazzInfo ) {
     }    
 }
 
+function removeByAttribute( attributeInfo ) {
+    if(ignoreByURLpattern(attributeInfo)) {
+        return;
+    }
+    let nodelist = document.querySelectorAll(attributeInfo.selector);
+    if(null!==nodelist) {
+        for( let node of nodelist ) {
+            node.remove();
+        }
+    }
+}
+
 function scanWebpage() {
     cookieNodeIds.forEach(idInfo => removeById(idInfo));
     cookieNodeClasses.forEach( clazzInfo => removeByClassname(clazzInfo));
+    customAttributes.forEach( attributeInfo => removeByAttribute(attributeInfo));
 }
 
 scanWebpage();
