@@ -1,4 +1,6 @@
 
+![Rookie Cookie Crush](https://raw.githubusercontent.com/coseos/rookie-cookie-crush/main/src/icons/rookie-cookie-crush-96.png)
+
 # rookie-cookie-crush
 
 Rookie Cookie Crush tries to remove GDPR consent cookie boxes
