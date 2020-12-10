@@ -13,7 +13,8 @@ const cookieNodeIds = [
 const cookieNodeClasses = [
     { clazz: "page-wrap--cookie-permission" },
     { clazz: "gdpr-cookieconsent-overlay" },
-    { clazz: "gdpr-cookieconsent-settings" }
+    { clazz: "gdpr-cookieconsent-settings" },
+    { clazz: "cookie-policy" }
 ];
 
 const customAttributes = [
