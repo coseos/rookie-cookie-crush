@@ -18,6 +18,12 @@
     }
   ],
   
+  "web_accessible_resources": [
+    "data/ids.json",
+    "data/clazzes.json",
+    "data/selectors.json"
+  ],
+
   "browser_specific_settings": {
     "gecko": {
       "id": "rookie-cookie-crush@coseos.com",

@@ -1,54 +1,28 @@
 const FIVE_SECONDS = 5000;
 const TEN_SECONDS = 10000;
 
-const cookieNodeIds = [
-    { nodeId: "\u0042\u006f\u0072\u006c\u0061\u0062\u0073\u0043\u006f\u006f\u006b\u0069\u0065\u0042\u006f\u0078" },
-    { nodeId: "cookieBanner" },
-    { nodeId: "cookie-banner" },
-    { nodeId: "cookieNotification" },
-    { nodeId: "gdpr-popup" },
-    { nodeId: "popup-cookieConsent" },
-    { nodeId: "lb", urlPattern: /^https?:\/\/(?:www\.)\u0067\u006f\u006f\u0067\u006c\u0065.\u0064\u0065/ }
-];
-
-const cookieNodeClasses = [
-    { clazz: "page-wrap--cookie-permission" },
-    { clazz: "gdpr-cookieconsent-overlay" },
-    { clazz: "gdpr-cookieconsent-settings" },
-    { clazz: "cookie-policy" }
-];
-
-const customAttributes = [
-    { selector: "div[aria-label='cookieconsent']" },
-    { selector: "div[data-testid='gdpr-dock']" }
-]
-
 function ignoreByURLpattern( info ) {
     if(null!==info.urlPattern) {
-        if(null===document.URL.match(info.urlPattern)) {
+        if(null===document.URL.match(new RegExp(info.urlPattern, 'i'))) {
             return true;
         }
     }
     return false;
 }
 
-function removeById( elementId ) {
-    if(null!==elementId.urlPattern) {
-        if(null===document.URL.match(elementId.urlPattern)) {
-            return;
-        }
+function removeById( elementInfo ) {
+    if(ignoreByURLpattern(elementInfo)) {
+        return;
     }
-    let element = document.getElementById(elementId.nodeId);
+    let element = document.getElementById(elementInfo.nodeId);
     if(null!==element) {
         element.remove();
     }
 }
 
 function removeByClassname( clazzInfo ) {
-    if(null!==clazzInfo.urlPattern) {
-        if(null===document.URL.match(clazzInfo.urlPattern)) {
-            return;
-        }
+    if(ignoreByURLpattern(clazzInfo)) {
+        return;
     }
     let nodelist = document.getElementsByClassName(clazzInfo.clazz);
     if(null!==nodelist) {
@@ -58,7 +32,7 @@ function removeByClassname( clazzInfo ) {
     }    
 }
 
-function removeByAttribute( attributeInfo ) {
+function removeBySelector( attributeInfo ) {
     if(ignoreByURLpattern(attributeInfo)) {
         return;
     }
@@ -70,10 +44,18 @@ function removeByAttribute( attributeInfo ) {
     }
 }
 
+function removeWith( datafile, func ) {
+    const dataURL = browser.runtime.getURL(datafile);
+    fetch(dataURL)
+        .then((response) => response.json())
+        .then((json) => json.data )
+        .then((data) => data.forEach( dataInfo => func(dataInfo )));
+}
+
 function scanWebpage() {
-    cookieNodeIds.forEach(idInfo => removeById(idInfo));
-    cookieNodeClasses.forEach( clazzInfo => removeByClassname(clazzInfo));
-    customAttributes.forEach( attributeInfo => removeByAttribute(attributeInfo));
+    removeWith( 'data/ids.json', removeById );
+    removeWith( 'data/clazzes.json', removeByClassname );
+    removeWith( 'data/selectors.json', removeBySelector );
 }
 
 scanWebpage();
