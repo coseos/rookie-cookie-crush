@@ -1,0 +1,6 @@
+{
+    "data": [
+        { "selector": "div[aria-label='cookieconsent']" },
+        { "selector": "div[data-testid='gdpr-dock']" }
+    ]    
+}

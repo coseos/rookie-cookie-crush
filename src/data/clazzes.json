@@ -1,0 +1,8 @@
+{
+    "data": [
+        { "clazz": "page-wrap--cookie-permission" },
+        { "clazz": "gdpr-cookieconsent-overlay" },
+        { "clazz": "gdpr-cookieconsent-settings" },
+        { "clazz": "cookie-policy" }
+    ]
+}
