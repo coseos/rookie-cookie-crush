@@ -3,6 +3,7 @@
         { "clazz": "page-wrap--cookie-permission" },
         { "clazz": "gdpr-cookieconsent-overlay" },
         { "clazz": "gdpr-cookieconsent-settings" },
-        { "clazz": "cookie-policy" }
+        { "clazz": "cookie-policy" },
+        { "clazz": "c24m-cookie-consent-wrapper" }
     ]
 }
