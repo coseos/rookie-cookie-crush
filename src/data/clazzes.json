@@ -4,6 +4,8 @@
         { "clazz": "gdpr-cookieconsent-overlay" },
         { "clazz": "gdpr-cookieconsent-settings" },
         { "clazz": "cookie-policy" },
-        { "clazz": "c24m-cookie-consent-wrapper" }
+        { "clazz": "c24m-cookie-consent-wrapper" },
+        { "clazz": "if6_eprivacy initial" },
+        { "clazz": "bpa-cookie-banner" }
     ]
 }
