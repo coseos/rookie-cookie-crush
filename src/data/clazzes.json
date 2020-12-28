@@ -6,6 +6,7 @@
         { "clazz": "cookie-policy" },
         { "clazz": "c24m-cookie-consent-wrapper" },
         { "clazz": "if6_eprivacy initial" },
-        { "clazz": "bpa-cookie-banner" }
+        { "clazz": "bpa-cookie-banner" },
+	{ "clazz": "consent-bar" }
     ]
 }
