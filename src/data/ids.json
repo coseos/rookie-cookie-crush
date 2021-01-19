@@ -8,6 +8,7 @@
     { "nodeId": "popup-cookieConsent" },
     { "nodeId": "lb", "urlPattern": "^https?:\\/\\/(?:www\\.)\u0067\u006f\u006f\u0067\u006c\u0065.\u0064\u0065" },
     { "nodeId": "cookieChoiceInfo" },
-    { "nodeId": "CybotCookiebotDialog" }
+    { "nodeId": "CybotCookiebotDialog" },
+    { "nodeId": "sp-cc", "urlPattern": "https?:\\/\\/(?:www\\.)\u0061\u006d\u0061\u007a\u006f\u006e.\u0064\u0065" }
     ]    
 }
