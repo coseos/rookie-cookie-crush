@@ -8,6 +8,7 @@
         { "clazz": "if6_eprivacy initial" },
         { "clazz": "bpa-cookie-banner" },
 	{ "clazz": "consent-bar" },
-        { "clazz": "dva-m-cookie-overlay" }
+        { "clazz": "dva-m-cookie-overlay" },
+        { "clazz": "bpa-cookie-banner" }
     ]
 }
