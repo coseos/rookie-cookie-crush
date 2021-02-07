@@ -10,6 +10,10 @@
     { "nodeId": "cookieChoiceInfo" },
     { "nodeId": "CybotCookiebotDialog" },
     { "nodeId": "sp-cc", "urlPattern": "https?:\\/\\/(?:www\\.)\u0061\u006d\u0061\u007a\u006f\u006e.\u0064\u0065" },
-    { "nodeId": "gdpr-modal" }
+    { "nodeId": "gdpr-modal" },
+    { "nodeId": "cookieinfo-container" },
+    { "nodeId": "cookie-law-info-bar" },
+    { "nodeId": "tc-privacy-wrapper" },
+    { "nodeId": "privacy-overlay" }    
     ]    
 }
