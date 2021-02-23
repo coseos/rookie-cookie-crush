@@ -9,6 +9,7 @@
         { "clazz": "bpa-cookie-banner" },
 	{ "clazz": "consent-bar" },
         { "clazz": "dva-m-cookie-overlay" },
-        { "clazz": "bpa-cookie-banner" }
+        { "clazz": "bpa-cookie-banner" },
+        { "clazz": "js-consent-banner" }
     ]
 }
