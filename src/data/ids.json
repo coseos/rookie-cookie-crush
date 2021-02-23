@@ -15,6 +15,7 @@
     { "nodeId": "cookie-law-info-bar" },
     { "nodeId": "tc-privacy-wrapper" },
     { "nodeId": "privacy-overlay" },
-    { "nodeId": "cookieBanner" } 
+    { "nodeId": "cookieBanner" },
+    { "nodeId": "SgCookieOptin" }
     ]    
 }
