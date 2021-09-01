@@ -16,6 +16,9 @@
     { "nodeId": "tc-privacy-wrapper" },
     { "nodeId": "privacy-overlay" },
     { "nodeId": "cookieBanner" },
-    { "nodeId": "SgCookieOptin" }
+    { "nodeId": "SgCookieOptin" },
+    { "nodeId": "cookie-popup" },
+    { "nodeId": "top-notification_accept-machmichweg-guidelines" },
+    { "nodeId": "cookieconsent" }
     ]    
 }
